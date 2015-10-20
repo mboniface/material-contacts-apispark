@@ -17,15 +17,17 @@ public class Contact implements Serializable {
     private Date birthday;
     private Boolean active;
     private Integer rank;
+    private String gender;
     private String companyId;
 
     public Contact(){}
 
-    public Contact(String id, String firstName, String lastName, String avatar) {
+    public Contact(String id, String firstName, String lastName, String avatar, String gender) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.avatar = avatar;
+        this.gender = gender;
     }
 
     public String getId() {
@@ -95,7 +97,16 @@ public class Contact implements Serializable {
 
     public void setCompanyId(String companyId) {
         this.companyId = companyId;
+    }    
+    
+    public String getGender() {
+    	return this.gender;
     }
+    
+    public void setGender(String gender) {
+    	this.gender = gender;
+    }    
+    
 
     public void validate() {
         ValidationErrors validationErrors = new ValidationErrors();
