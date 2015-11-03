@@ -18,7 +18,7 @@ public class Contact implements Serializable {
     private Gender gender;
     private Boolean active;
     private Integer rank;
-    private int companyId;
+    private String companyId;
 
     public Contact(){}
 
